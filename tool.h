@@ -1,5 +1,29 @@
 #include <bits/stdc++.h>
 using namespace std;
+//会得到一个随机数组，m，n是长和宽，当我们sort_val的时候，他会形成一个从左上角向右下角递增的平面
+vector<vector<int>> getRandom2D(int m,int n,bool sort_val=false)
+{
+    vector<vector<int>> res(m,vector<int>(n));
+    for(int i=0;i<n;i++)
+    {
+        cout<<setw(3)<<0<<" ";
+    }
+    cout<<endl;
+    for(int i=1;i<n;i++)
+    {
+        cout<<setw(3)<<0<<" ";
+        for(int j=1;j<n;j++)
+        {
+            if(!sort_val)
+            res[i][j]=rand()%100;
+            else
+            res[i][j]=max(res[i-1][j],res[i][j-1])+rand()%5;
+            cout<<setw(3)<<res[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+    return res;
+}
 struct ListNode
 {
     int val;

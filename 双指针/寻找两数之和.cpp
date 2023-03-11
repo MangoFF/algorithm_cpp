@@ -8,6 +8,10 @@ using namespace std;
 
 你可以按任意顺序返回答案。
 */
+/*
+经典的双指针的问题，相向的指针，在一个排好序的数组中，增大前指针使结果变大，减小后指针使结果变小
+从而达到减少搜索范围的目的
+*/
 vector<int> twoSum(vector<int> &nums,int target)
 {
     vector<int> res;

@@ -2,6 +2,7 @@
 #include<algorithm>
 #include<vector>
 using namespace std;
+//贪心算法，A：一个子弹发射两个（分别命中不同对象）或者直接按B：直接秒杀 问最少需要shot多少
 int main()
 {
     int n;
